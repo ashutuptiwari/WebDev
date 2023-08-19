@@ -38,6 +38,10 @@ select {
   font-size: 14px;
   text-decoration: none;
 }
+select option:not(:checked) {
+  /* Remove line-through for unchecked options */
+  text-decoration: none;
+}
 
 select[value="LOW"] {
   color: #00a86b;
@@ -70,4 +74,18 @@ select option[value="URGENT"] {
   background-color: #ff4500;
   color: #fff;
   text-decoration: none;    
+}
+.todo-item.urgent {
+  background-color: #ff4500; /* Red for URGENT */
+  color: #fff; /* White text for URGENT */
+}
+
+.todo-item.medium {
+  background-color: #ffa500; /* Orange for MEDIUM */
+  color: #fff; /* White text for MEDIUM */
+}
+
+.todo-item.low {
+  background-color: #00a86b; /* Green for LOW */
+  color: #fff; /* White text for LOW */
 }
